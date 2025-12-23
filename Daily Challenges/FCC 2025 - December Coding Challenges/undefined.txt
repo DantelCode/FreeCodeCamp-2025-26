@@ -1,0 +1,33 @@
+** start of script.js **
+
+const exchangeRates = {
+  "USD": 1.00,
+  "EUR": 1.10,
+  "GBP": 1.25,
+  "JPY": 0.0070,
+  "CAD": 0.75
+}
+
+function buyItems(funds, items) {
+  funds[0] *= exchangeRates[funds[1]];
+  let sum_of_items = 0;
+  let finalAmount;
+  let itemCount = 0;
+  items.forEach(item => {
+    item[0] *= exchangeRates[item[1]];
+    sum_of_items += parseInt(item[0]);
+    itemCount++;
+    if ( sum_of_items >= funds[0] ) {
+      finalAmount = sum_of_items - parseInt(item[0]);
+    itemCount--;
+    }
+  })
+
+  if(itemCount === items.length) {
+    return "Buy them all!"
+  }
+  return `Buy the first ${itemCount} items.`;
+}
+
+** end of script.js **
+

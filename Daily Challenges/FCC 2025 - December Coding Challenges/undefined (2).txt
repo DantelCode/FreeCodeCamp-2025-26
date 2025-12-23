@@ -1,0 +1,13 @@
+** start of script.js **
+
+function toSnake(camel) {
+  const regex = /[A-Z]/g;
+  const camelCases = camel.match(regex);
+  camelCases.forEach(cCase => {
+    camel = camel.replace(cCase, `_${cCase.toLowerCase()}`);
+  });
+  return camel;
+}
+
+** end of script.js **
+

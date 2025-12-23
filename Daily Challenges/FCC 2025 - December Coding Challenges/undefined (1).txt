@@ -1,0 +1,10 @@
+** start of script.js **
+
+function convertToKm(miles) {
+  miles *= 1.60934;
+  return parseFloat(miles.toPrecision(3));
+}
+console.log(convertToKm(1))
+
+** end of script.js **
+

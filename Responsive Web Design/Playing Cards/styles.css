@@ -1,0 +1,55 @@
+body {
+  background: rgb(251, 223, 228);
+}
+
+#playing-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: rgb(251, 251, 251);
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #ccc;
+  padding: 16px 16px;
+  border: 1px solid rgb(183, 181, 181);
+  transition: 200ms ease all;
+}
+.card:hover {
+  scale: 1.01;
+}
+
+.left,
+.right {
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.left {
+  display: flex;
+  align-self: flex-start;
+}
+
+.middle {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  font-size: 60px;
+}
+.middle span:last-child {
+  rotate: 180deg;
+}
+
+.right {
+  display: flex;
+  align-self: flex-end;
+  rotate: 180deg;
+}

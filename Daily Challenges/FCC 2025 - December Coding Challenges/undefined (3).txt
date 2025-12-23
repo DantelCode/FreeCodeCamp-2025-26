@@ -1,0 +1,18 @@
+** start of script.js **
+
+function convertListItem(markdown) {
+  markdown = markdown.trim();
+
+  const regex = /^\d+\. .+$/;
+
+  if(regex.test(markdown)) {
+    return `<li>${markdown.split(".").map(part => part.trim())[1]}</li>`
+  } else {
+    return "Invalid format"
+  }
+  // ${markdown.split(".")[1]}
+}
+console.log(convertListItem(" 1.  Another item"))
+
+** end of script.js **
+
